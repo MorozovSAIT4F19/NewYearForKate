@@ -10,7 +10,7 @@ let currentGuess = [];
 // следующая буква
 let nextLetter = 0;
 // загаданное слово
-let rightGuessString = "собор" //WORDS[Math.floor(Math.random() * WORDS.length)]
+let rightGuessString = "собор"; //WORDS[Math.floor(Math.random() * WORDS.length)]
 // на всякий случай выведем в консоль загаданное слово, чтобы проверить, как работает игра
 console.log(rightGuessString)
 
