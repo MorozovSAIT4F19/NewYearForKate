@@ -1,0 +1,45 @@
+/* заголовок страницы */
+h1 {
+    text-align: center;
+   }
+   
+   /* стиль для всей доски */
+   #game-board {
+     /* делаем выравнивание всех элементов по центру */
+     display: flex;
+     align-items: center;
+     /* добавляем выравнивание по вертикали */
+     flex-direction: column;
+   }
+   
+   /* стиль для строки */
+   .letter-row {
+     /* каждая клетка пусть будет в своём отдельном контейнере */
+     display: flex;
+   }
+   
+   /* стиль для клетки */
+   .letter-box {
+     /* рисуем границу */
+     border: 2px solid gray;
+     border-radius: 3px;
+     /* добавляем отступы */
+     margin: 2px;
+     /* размер шрифта */
+     font-size: 2.5rem;
+     font-weight: 700;
+     /* высота и ширина клетки */
+     height: 3rem;
+     width: 3rem;
+     /* выравниваем содержимое по центру */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* делаем все буквы большими */
+     text-transform: uppercase;
+   }
+   
+   /* добавляем жирную обводку у заполненных клеток */
+   .filled-box {
+     border: 3px solid black;
+   }
