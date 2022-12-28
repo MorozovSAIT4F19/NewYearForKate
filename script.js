@@ -10,7 +10,7 @@ let currentGuess = [];
 // следующая буква
 let nextLetter = 0;
 // загаданное слово
-let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)]
+let rightGuessString = 'собор' //WORDS[Math.floor(Math.random() * WORDS.length)]
 // на всякий случай выведем в консоль загаданное слово, чтобы проверить, как работает игра
 console.log(rightGuessString)
 
@@ -42,6 +42,9 @@ function initBoard() {
         board.appendChild(row)
     }
 }
+
+// рисуем игровое поле
+initBoard();
 
 // удаление символа
 function deleteLetter () {
@@ -114,12 +117,20 @@ function checkGuess () {
                 letterColor = 'yellow'
             }
 
-            // заменяем обработанный символ на знак решётки, чтобы не использовать его на следующем шаге цикла
+            // заменяем обработанный символ на знак решётки, чтобы не использовать его на следущем шаге цикла
             rightGuess[letterPosition] = "#"
         }
 
-        // применяем выбранный цвет к фону клетки
-        box.style.backgroundColor = letterColor;
+        let delay = 350 * i
+        setTimeout(()=> {
+            // применяем выбранный цвет к фону клетки
+            box.style.backgroundColor = letterColor;
+            // и к кнопке на экранной клавиатуре
+            shadeKeyBoard(letter, letterColor)
+        }, delay)
+
+        
+
     }
 
     // если мы угадали
@@ -197,8 +208,8 @@ document.addEventListener("keydown", (e) => {
         return;
     }
 
-    // проверяем, есть ли введённый символ в английском алфавите
-    let found = pressedKey.match(/[a-z]/gi)
+    // проверяем, есть ли введённый символ в русском алфавите
+    let found = pressedKey.match(/[а-яА-ЯЁё]/gi)
     // если нет
     if (!found || found.length > 1) {
         // то выходим из обработчика
@@ -209,5 +220,44 @@ document.addEventListener("keydown", (e) => {
     }
 })
 
+// обработчик нажатий на экранную клавиатуру
+document.getElementById("keyboard-cont").addEventListener("click", (e) => {
+    // получаем нажатый элемент
+    const target = e.target
+    
+    // если нажали не на нашу клавиатуру — выходим из обработчика
+    if (!target.classList.contains("keyboard-button")) {
+        return
+    }
+    // получаем текст нажатой кнопки
+    let key = target.textContent
 
-initBoard();
+    // имитируем нажатие этой кнопки на настоящей клавиатуре
+    document.dispatchEvent(new KeyboardEvent("keydown", {'key': key}))
+})
+
+// подсвечиваем кнопки на экранной клавиатуре
+function shadeKeyBoard(letter, color) {
+    // перебираем все кнопки виртуальной клавиатуры
+    for (const elem of document.getElementsByClassName("keyboard-button")) {
+        // если текст на кнопке совпадает с текущей буквой
+        if (elem.textContent === letter) {
+            // запоминаем текцщий цвет буквы
+            let oldColor = elem.style.backgroundColor
+            // если она была зелёной — оставляем как есть и выходим из функции
+            if (oldColor === 'green') {
+                return
+            } 
+
+            // если текущий цвет — жёлтый, а новый — не зелёный, то тоже оставляем как есть и выходим из функции
+            if (oldColor === 'yellow' && color !== 'green') {
+                return
+            }
+
+            // делаем кнопку на клавиатуре того же цвета, что и соответствующая буква на игровом поле
+            elem.style.backgroundColor = color;
+            // выходим из цикла
+            break
+        }
+    }
+}
