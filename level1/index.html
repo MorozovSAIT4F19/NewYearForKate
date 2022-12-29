@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <style>
+    body {
+     background: url(1.jpg);
+    }
+   </style>
+</head>
+<body>
+    <h1> Новогодние 5 букв для Антифеевой Кати <span>&#129392</span> </h1>
+
+    <bgsound src="1.mp3" loop="-1"></bgsound>
+    
+    <div id="game-board"></div>
+
+    <!-- общий блок для всей клавиатуры -->
+    <div id="keyboard-cont">
+        <!-- блок с первым рядом -->
+        <div class="first-row">
+            <!-- блоки с отдельными кнопками -->
+            <button class="keyboard-button">й</button>
+            <button class="keyboard-button">ц</button>
+            <button class="keyboard-button">у</button>
+            <button class="keyboard-button">к</button>
+            <button class="keyboard-button">е</button>
+            <button class="keyboard-button">н</button>
+            <button class="keyboard-button">г</button>
+            <button class="keyboard-button">ш</button>
+            <button class="keyboard-button">щ</button>
+            <button class="keyboard-button">з</button>
+            <button class="keyboard-button">х</button>
+            <button class="keyboard-button">ъ</button>
+        </div>
+        <div class="second-row">
+            <button class="keyboard-button">ф</button>
+            <button class="keyboard-button">ы</button>
+            <button class="keyboard-button">в</button>
+            <button class="keyboard-button">а</button>
+            <button class="keyboard-button">п</button>
+            <button class="keyboard-button">р</button>
+            <button class="keyboard-button">о</button>
+            <button class="keyboard-button">л</button>
+            <button class="keyboard-button">д</button>
+            <button class="keyboard-button">ж</button>
+            <button class="keyboard-button">э</button>
+        </div>
+        <div class="third-row">
+            <button class="keyboard-button">Backspace</button>
+            <button class="keyboard-button">я</button>
+            <button class="keyboard-button">ч</button>
+            <button class="keyboard-button">с</button>
+            <button class="keyboard-button">м</button>
+            <button class="keyboard-button">и</button>
+            <button class="keyboard-button">т</button>
+            <button class="keyboard-button">ь</button>
+            <button class="keyboard-button">б</button>
+            <button class="keyboard-button">ю</button>
+            <button class="keyboard-button">ё</button>
+            <button class="keyboard-button">Enter</button>
+        </div>
+    </div>
+
+    <div id="button">
+        <a class="show_popup" rel="forma" href="https://morozovsait4f19.github.io/NewYearForKate/level2">Приступить ко второму уровню</a>
+    </div>
+        
+
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="script.js" type="module"></script>
+</body>
+</html>
