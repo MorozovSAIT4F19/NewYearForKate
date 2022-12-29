@@ -2,14 +2,15 @@
 h1 {
   text-align: center;
   color: crimson;
-  box-shadow: -10px 0 0 #050505, 10px 0 0 #050505;
+  background-color: black;
  }
 
 a {
-  font-size: 50px;
+  font-size: 20px;
   text-align: center;
   color: crimson;
-  box-shadow: -10px 0 0 #070707, 10px 0 0 #070707;
+  background-color: black;
+  margin: auto;
  }
  
  /* стиль для всей доски */

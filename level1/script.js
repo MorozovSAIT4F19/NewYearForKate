@@ -1,3 +1,11 @@
+function soundClick() {
+    var audio = new Audio(); // Создаём новый элемент Audio
+    audio.src = '1.mp3'; // Указываем путь к звуку "клика"
+    audio.autoplay = true; // Автоматически запускаем
+  }
+
+soundClick();
+
 // импортируем слова из файла
 import { WORDS } from "./words.js";
 
