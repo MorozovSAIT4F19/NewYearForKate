@@ -12,6 +12,15 @@ a {
   align-items: center;
   font-weight: bold;
  }
+
+p {
+  font-size: 40px;
+  text-align: center;
+  color: rgb(53, 220, 20);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+ }
  
 /* общие настройки для всей клавиатуры */
 #audio-pleer {
@@ -23,6 +32,14 @@ a {
 
 /* общие настройки для всей клавиатуры */
 #next-level {
+  /* каждый элемент будет в своём виртуальном контейнере с выравниванием по центру */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* общие настройки для всей клавиатуры */
+#notification {
   /* каждый элемент будет в своём виртуальном контейнере с выравниванием по центру */
   display: flex;
   flex-direction: column;
