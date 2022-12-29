@@ -139,8 +139,9 @@ function checkGuess () {
         toastr.success("Вы выиграли!")
         // переход на след уровень
         document.getElementsByTagName('body')[0].innerHTML += '<div id="notification"><p>Моя умничка <span>&#128523</span> </p></div>';
-        document.getElementsByTagName('body')[0].innerHTML += '<div id="next-level"><a href="https://drive.google.com/drive/folders/1ZvY98RPam15ZX-XU3h5KUAYbaMmYx97W?usp=sharing">Ссылка на билеты (только с Antykaty93@gmail.com)</a></div>';
+        document.getElementsByTagName('body')[0].innerHTML += '<div id="next-level"><a href="https://artbene.ru/concert/i-s-bakh-vse-sochineniya-dlya-organa-konce-6/">21 января в 20:00 идем на концерт</a></div>';
         document.getElementsByTagName('body')[0].innerHTML += '<div id="next-level"><a href="https://www.youtube.com/watch?v=iiMuN-Og-GQ&t=1s">Ссылка на YouTube-канал концертов в Римско-католическом соборе</a></div>';
+        document.getElementsByTagName('body')[0].innerHTML += '<div id="next-level"><a href="https://drive.google.com/file/d/1fuKl-GREDDZMe2Cwsdux9cmwPEtNqBKC/view?usp=sharing">Ссылка на билеты (доступ у Antykaty93@gmail.com)</a></div>';
         // обнуляем количество попыток
         guessesRemaining = 0;
         // выходим из проверки
