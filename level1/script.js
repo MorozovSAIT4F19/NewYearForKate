@@ -138,7 +138,7 @@ function checkGuess () {
         // выводим сообщение об успехе
         toastr.success("Вы выиграли!")
         // переход на след уровень
-        document.getElementsByTagName('body')[0].innerHTML += '<a href="https://morozovsait4f19.github.io/NewYearForKate/level2/">Переход на следующий уровень</a>';
+        document.getElementsByTagName('body')[0].innerHTML += '<div id="next-level"><a href="https://morozovsait4f19.github.io/NewYearForKate/level2/">Переход на следующий уровень</a></div>';
         // обнуляем количество попыток
         guessesRemaining = 0;
         // выходим из проверки
