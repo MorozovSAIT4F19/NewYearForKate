@@ -133,12 +133,12 @@ function checkGuess () {
 
     }
 
-    if (guessString != rightGuessString) $('#button').css({display: 'none'});
-
     // если мы угадали
     if (guessString === rightGuessString) {
         // выводим сообщение об успехе
         toastr.success("Вы выиграли!")
+        // переход на след уровень
+        document.getElementsByTagName('body')[0].innerHTML += '<a href="https://morozovsait4f19.github.io/NewYearForKate/level2/">Переход на следующий уровень</a>';
         // обнуляем количество попыток
         guessesRemaining = 0;
         // выходим из проверки

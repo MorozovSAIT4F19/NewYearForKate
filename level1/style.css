@@ -1,6 +1,7 @@
 /* заголовок страницы */
 h1 {
   text-align: center;
+  color: crimson;
  }
  
  /* стиль для всей доски */
@@ -20,6 +21,7 @@ h1 {
  
  /* стиль для клетки */
  .letter-box {
+   background-color: blanchedalmond;
    /* рисуем границу */
    border: 2px solid gray;
    border-radius: 3px;
