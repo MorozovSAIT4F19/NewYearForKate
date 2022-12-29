@@ -1,0 +1,106 @@
+/* заголовок страницы */
+h1 {
+  text-align: center;
+  color: rgb(53, 220, 20);
+ }
+
+a {
+  font-size: 40px;
+  text-align: center;
+  color: rgb(53, 220, 20);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+ }
+ 
+/* общие настройки для всей клавиатуры */
+#audio-pleer {
+  /* каждый элемент будет в своём виртуальном контейнере с выравниванием по центру */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* общие настройки для всей клавиатуры */
+#next-level {
+  /* каждый элемент будет в своём виртуальном контейнере с выравниванием по центру */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ /* стиль для всей доски */
+ #game-board {
+   /* делаем выравнивание всех элементов по центру */
+   display: flex;
+   align-items: center;
+   /* добавляем выравнивание по вертикали */
+   flex-direction: column;
+ }
+ 
+ /* стиль для строки */
+ .letter-row {
+   /* каждая клетка пусть будет в своём отдельном контейнере */
+   display: flex;
+ }
+ 
+ /* стиль для клетки */
+ .letter-box {
+   background-color: blanchedalmond;
+   /* рисуем границу */
+   border: 2px solid gray;
+   border-radius: 3px;
+   /* добавляем отступы */
+   margin: 2px;
+   /* размер шрифта */
+   font-size: 2.5rem;
+   font-weight: 700;
+   /* высота и ширина клетки */
+   height: 3rem;
+   width: 3rem;
+   /* выравниваем содержимое по центру */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* делаем все буквы большими */
+   text-transform: uppercase;
+ }
+ 
+ /* добавляем жирную обводку у заполненных клеток */
+ .filled-box {
+   border: 3px solid black;
+ }
+ 
+ /* общие настройки для всей клавиатуры */
+ #keyboard-cont {
+   /* добавляем отступы между всеми элементами */
+   margin: 1rem 0;
+   /* каждый элемент будет в своём виртуальном контейнере с выравниванием по центру */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ 
+ /* текст внутри контейнера тоже выровняем по центру */
+ #keyboard-cont div {
+   display: flex;
+ }
+ 
+ /* добавляем отступ между рядами букв */
+ .second-row {
+   margin: 0.5rem 0;
+ }
+ 
+ /* настройки внешнего вида каждого элемента с буквами */
+ .keyboard-button {
+   /* размер шрифра */
+   font-size: 1rem;
+   font-weight: 700;
+   /* отступы */
+   padding: 0.5rem;
+   margin: 0 2px;
+   /* меняем внешний вид курсора */
+   cursor: pointer;
+   /* делаем всё большими буквами */
+   text-transform: uppercase;
+ }
